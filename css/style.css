@@ -18,6 +18,7 @@ body {
     --main-color: #101828;
     --sub-color: #6A7282;
     --sub-color1: #4A5565;
+    --main-padding: 24px;
 }
 
 .intialization-container {
@@ -354,7 +355,7 @@ section {
 /* start recent-activities */
 
 .recent-activities {
-    padding: 24px;
+    padding: var(--main-padding);
 }
 
 .recent-activities-container {
@@ -483,7 +484,7 @@ section {
 /* start monthly-bills */
 
 .monthly-bills {
-    padding: 24px;
+    padding: var(--main-padding);
 }
 
 .container-heading .show-all {
@@ -578,7 +579,7 @@ section {
     background-color: #DBFCE7;
 }
 
-.netflix-icon img{
+.netflix-icon img {
     background-color: #FFE2E2;
 }
 
@@ -615,6 +616,234 @@ section {
 }
 
 /* end monthly-bills */
+
+/* start recent-transactions */
+
+.recent-transactions {
+    padding: var(--main-padding);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+th,
+td {
+    white-space: nowrap;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+thead tr th {
+    font-size: 14px;
+    color: var(--sub-color1);
+    padding: 12px 8px;
+}
+
+thead th {
+    border-bottom: 2px solid #F3F4F6;
+}
+
+tbody td {
+    border-bottom: 1px solid #F3F4F6;
+}
+
+tbody tr td {
+    padding: 16px 8px;
+}
+
+.table-image,
+.table-icon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.table-image-img img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.table-icon-img {
+    border-radius: 50%;
+    padding: 8px;
+    width: 40px;
+}
+
+.table-icon-img img {
+    width: 100%;
+    display: block;
+}
+
+.table-icon-food {
+    background-color: #FFEDD4;
+}
+
+.table-icon-shopping {
+    background-color: #DBEAFE;
+}
+
+.table-icon-transportation {
+    background-color: #FFE2E2;
+}
+
+.table-icon-entertainment {
+    background-color: #E0E7FF;
+}
+
+.table-icon-fitlife {
+    background-color: #CEFAFE;
+}
+
+.table-icon-education {
+    background-color: #D0FAE5;
+}
+
+.table-image-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.table-image-value {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--sub-color);
+}
+
+.category {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 10px;
+    border-radius: 30px;
+}
+
+.income-category {
+    background-color: #DBFCE7;
+}
+
+.income-text {
+    color: #016630;
+}
+
+.food-category {
+    background-color: #FFEDD4;
+}
+
+.food-text {
+    color: #AB3000;
+}
+
+.shopping-category {
+    background-color: #DBEAFE;
+}
+
+.shopping-text {
+    color: #2648BD;
+}
+
+.bill-category {
+    background-color: #F3E8FF;
+}
+
+.bill-text {
+    color: #6E11B0;
+}
+
+.work-category {
+    background-color: #DBFCE7;
+}
+
+.work-text {
+    color: #016630;
+}
+
+.transportation-category {
+    background-color: #FFE2E2;
+}
+
+.transportation-text {
+    color: #9F0712;
+}
+
+.entertainment-category {
+    background-color: #E0E7FF;
+}
+
+.entertainment-text {
+    color: #372AAC;
+}
+
+.fitlife-category {
+    background-color: #CEFAFE;
+}
+
+.fitlife-text {
+    color: #005F78;
+}
+
+.education-category {
+    background-color: #D0FAE5;
+}
+
+.education-text {
+    color: #006045;
+}
+
+.category img {
+    width: 14px;
+    display: block;
+}
+
+.category-text {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--sub-color1);
+}
+
+.done,
+.hanging {
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 2px 10px
+}
+
+.done {
+    background-color: #DBFCE7;
+    color: #016630;
+}
+
+.hanging {
+    background-color: #FEF9C2;
+    color: #894B00;
+}
+
+.table-price-minus,
+.table-price-plus {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.table-price-minus {
+    color: var(--main-color);
+}
+
+.table-price-plus {
+    color: #008732;
+}
+
+
+/* end recent-transactions */
 
 /* media */
 
