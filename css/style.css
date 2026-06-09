@@ -26,6 +26,12 @@ body {
     box-shadow: 0 1px 3px 0px #EBECEF;
 }
 
+.intialization-container-small {
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 12px;
+}
+
 /* end globle feature */
 
 /* start grid feature */
@@ -357,8 +363,10 @@ section {
     padding: 12px;
 }
 
-
 .container-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 24px;
 }
 
@@ -471,6 +479,142 @@ section {
 
 /* end recent-activities */
 
+
+/* start monthly-bills */
+
+.monthly-bills {
+    padding: 24px;
+}
+
+.container-heading .show-all {
+    font-size: 14px;
+    font-weight: 550;
+    color: var(--sub-color1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.container-heading .show-all:hover {
+    color: var(--main-color);
+}
+
+.monthly-bills-text {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.monthly-bills-text .monthly-bills-price {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.monthly-bills-text .monthly-bills-overall {
+    font-size: 14px;
+    font-weight: 550;
+    color: var(--sub-color);
+
+}
+
+.your-monthly-bills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "internet electricity"
+        "phone netflix"
+    ;
+}
+
+.internet {
+    text-align: center;
+    grid-area: internet;
+    background-color: #F9FAFB;
+}
+
+.electricity {
+    text-align: center;
+    grid-area: electricity;
+    background-color: #F9FAFB;
+}
+
+.phone {
+    text-align: center;
+    grid-area: phone;
+    background-color: #F9FAFB;
+}
+
+.netflix {
+    text-align: center;
+    grid-area: netflix;
+    background-color: #F9FAFB;
+}
+
+.monthly-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.monthly-icon img {
+    margin: 1px auto;
+    width: 36px;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.internet-icon img {
+    background-color: #DBEAFE;
+}
+
+.electricity-icon img {
+    background-color: #FEF9C2;
+}
+
+.phone-icon img {
+    background-color: #DBFCE7;
+}
+
+.netflix-icon img{
+    background-color: #FFE2E2;
+}
+
+.monthly-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--sub-color);
+}
+
+.monthly-price {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.monthly-time {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.internet-time {
+    color: #FB2C36;
+}
+
+.electricity-time {
+    color: #FF6900;
+}
+
+.phone-time {
+    color: #00C950;
+}
+
+.netflix-time {
+    color: var(--sub-color);
+}
+
+/* end monthly-bills */
 
 /* media */
 
