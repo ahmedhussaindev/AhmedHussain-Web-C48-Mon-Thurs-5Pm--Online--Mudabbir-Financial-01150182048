@@ -20,6 +20,12 @@ body {
     --sub-color1: #4A5565;
 }
 
+.intialization-container {
+    border: 2px solid #E5E7EB;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px 0px #EBECEF;
+}
+
 /* end globle feature */
 
 /* start grid feature */
@@ -304,9 +310,6 @@ section {
 .income,
 .expenses {
     padding: 32px;
-    border: 2px solid #E5E7EB;
-    border-radius: 16px;
-    box-shadow: 0 1px 3px 0px #EBECEF;
 }
 
 .balance-text {
@@ -341,6 +344,133 @@ section {
 }
 
 /* end balnce sections*/
+
+/* start recent-activities */
+
+.recent-activities {
+    padding: 24px;
+}
+
+.recent-activities-container {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+}
+
+
+.container-heading {
+    margin-bottom: 24px;
+}
+
+.container-heading h3 {
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+.create-account {
+    background-color: #EFF6FF;
+    border-left: 4px solid #2B7FFF;
+    border-radius: 16px;
+    margin-bottom: 12px;
+}
+
+.add-card {
+    background-color: #F0FDF4;
+    border-left: 4px solid #00C950;
+    border-radius: 16px;
+}
+
+.recent-activities-text {
+    width: 100%;
+}
+
+.recent-activities-hedding {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.recent-activities-hedding h4 {
+    font-size: 14px;
+    color: var(--main-color);
+}
+
+.account,
+.card {
+    font-size: 12px;
+    font-weight: 550;
+
+}
+
+.account {
+    color: #155DFC;
+}
+
+.card {
+    color: #00A63E;
+}
+
+.recent-activities-text p {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--sub-color1);
+    margin-bottom: 8px;
+}
+
+.recent-activities-text .time {
+    font-size: 12px;
+    font-weight: 550;
+    color: var(--sub-color);
+}
+
+
+.recent-activities-icon {
+    width: 36px;
+}
+
+.recent-activities-icon img {
+    width: 100%;
+    display: block;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.user-icon img {
+    background-color: #DBEAFE;
+}
+
+.card-icon img {
+    background-color: #DBFCE7;
+}
+
+.recent-activities-button {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    margin-top: 16px;
+    position: relative;
+}
+
+.recent-activities-button::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #F3F4F6;
+    position: absolute;
+    top: 0px;
+}
+
+.recent-activities-button button {
+    background-color: transparent;
+    color: #2258F8;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* end recent-activities */
+
 
 /* media */
 
