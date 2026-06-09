@@ -37,12 +37,14 @@ body {
     display: grid;
     grid-area: container;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
     gap: 40px 20px;
     grid-auto-flow: row;
     grid-template-areas:
         "nav-bar nav-bar nav-bar"
-        "expenses  income current-balance"
+        "current-balance current-balance current-balance"
+        "income income income"
+        "expenses expenses expenses"
         "recent-transactions recent-transactions recent-activities"
         "recent-transactions recent-transactions monthly-bills"
         "payment-methods income-versus-expenses budget-overview"
@@ -296,6 +298,49 @@ section {
 
 /* end header */
 
+/* start balnce sections*/
+
+.current-balance,
+.income,
+.expenses {
+    padding: 32px;
+    border: 2px solid #E5E7EB;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px 0px #EBECEF;
+}
+
+.balance-text {
+    font-size: 14px;
+    font-weight: 550;
+    color: var(--sub-color1);
+}
+
+.balance-price {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.rate span {
+    font-weight: 550;
+    color: #00A63E;
+}
+
+.rate .down-arrow {
+    color: #E7000B;
+}
+
+.rate img {
+    width: 16px;
+}
+
+/* end balnce sections*/
 
 /* media */
 
@@ -523,8 +568,6 @@ section {
         display: none;
     }
 
-
-
     /* end side bar */
 
     /* start header */
@@ -562,6 +605,25 @@ section {
     }
 
     /* end header */
+
+    /* start balnce sections */
+
+    .container {
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+            "nav-bar nav-bar nav-bar"
+            "expenses  income current-balance"
+            "recent-transactions recent-transactions recent-activities"
+            "recent-transactions recent-transactions monthly-bills"
+            "payment-methods income-versus-expenses budget-overview"
+            "payment-methods account-summary budget-overview";
+    }
+
+    .balance-price {
+        font-size: 26px;
+    }
+
+    /* end balnce sections */
 }
 
 /* lg */
@@ -580,6 +642,10 @@ section {
 
     .lg-w100 {
         width: 100%;
+    }
+
+    .balance-price {
+        font-size: 36px;
     }
 }
 
