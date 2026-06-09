@@ -1,0 +1,205 @@
+/* start globle feature */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    background-color: #F9FAFB;
+}
+
+:root {
+    --main-color: #101828;
+    --sub-color: #6A7282;
+}
+
+/* end globle feature */
+
+/* start grid feature */
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "container container container container side-bar";
+}
+
+.container {
+    display: grid;
+    grid-area: container;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nav-bar nav-bar nav-bar"
+        "expenses  income current-balance"
+        "recent-transactions recent-transactions recent-activities"
+        "recent-transactions recent-transactions monthly-bills"
+        "payment-methods income-versus-expenses budget-overview"
+        "payment-methods account-summary budget-overview";
+    padding: 32px;
+}
+
+.nav-bar {
+    grid-area: nav-bar;
+}
+
+.side-bar {
+    grid-area: side-bar;
+}
+
+.current-balance {
+    grid-area: current-balance;
+}
+
+.income {
+    grid-area: income;
+}
+
+.expenses {
+    grid-area: expenses;
+}
+
+.recent-activities {
+    grid-area: recent-activities;
+}
+
+.monthly-bills {
+    grid-area: monthly-bills;
+}
+
+.recent-transactions {
+    grid-area: recent-transactions;
+}
+
+.income-versus-expenses {
+    grid-area: income-versus-expenses;
+}
+
+.account-summary {
+    grid-area: account-summary;
+}
+
+.payment-methods {
+    grid-area: payment-methods;
+}
+
+.budget-overview {
+    grid-area: budget-overview;
+}
+
+aside,
+header,
+section {
+    direction: rtl;
+    text-align: right;
+}
+
+/* end grid feature */
+
+
+/* media */
+
+/* sm */
+@media screen and (min-width:640px) {
+    .sm-w25 {
+        width: 25%;
+    }
+
+    .sm-w33 {
+        width: 33.33%;
+    }
+
+    .sm-w50 {
+        width: 50%;
+    }
+
+    .sm-w100 {
+        width: 100%;
+    }
+}
+
+/* md */
+@media screen and (min-width:786px) {
+    .md-w25 {
+        width: 25%;
+    }
+
+    .md-w33 {
+        width: 33.33%;
+    }
+
+    .md-w50 {
+        width: 50%;
+    }
+
+    .md-w100 {
+        width: 100%;
+    }
+}
+
+/* lg */
+@media screen and (min-width:1024px) {
+    .lg-w25 {
+        width: 25%;
+    }
+
+    .lg-w33 {
+        width: 33.33%;
+    }
+
+    .lg-w50 {
+        width: 50%;
+    }
+
+    .lg-w100 {
+        width: 100%;
+    }
+}
+
+/* xl */
+@media screen and (min-width:1280px) {
+    .xl-w25 {
+        width: 25%;
+    }
+
+    .xl-w33 {
+        width: 33.33%;
+    }
+
+    .xl-w50 {
+        width: 50%;
+    }
+
+    .xl-w100 {
+        width: 100%;
+    }
+}
+
+/* xxl */
+@media screen and (min-width:1536px) {
+    .xxl-w25 {
+        width: 25%;
+    }
+
+    .xxl-w33 {
+        width: 33.33%;
+    }
+
+    .xxl-w50 {
+        width: 50%;
+    }
+
+    .xxl-w100 {
+        width: 100%;
+    }
+}
