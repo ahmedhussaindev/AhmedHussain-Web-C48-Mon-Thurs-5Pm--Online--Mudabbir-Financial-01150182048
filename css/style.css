@@ -8,7 +8,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: "IBM Plex Sans Arabic", sans-serif;
     background-color: #F9FAFB;
@@ -49,19 +48,22 @@ body {
 .container {
     display: grid;
     grid-area: container;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
     gap: 40px 20px;
     grid-auto-flow: row;
     grid-template-areas:
-        "nav-bar nav-bar nav-bar"
-        "current-balance current-balance current-balance"
-        "income income income"
-        "expenses expenses expenses"
-        "recent-transactions recent-transactions recent-activities"
-        "recent-transactions recent-transactions monthly-bills"
-        "payment-methods income-versus-expenses budget-overview"
-        "payment-methods account-summary budget-overview";
+        "nav-bar"
+        "current-balance"
+        "income"
+        "expenses"
+        "recent-activities"
+        "recent-transactions"
+        "monthly-bills"
+        "budget-overview"
+        "income-versus-expenses"
+        "account-summary"
+        "payment-methods";
     padding: 16px 16px 32px;
 }
 
@@ -622,6 +624,7 @@ section {
 
 .recent-transactions {
     padding: var(--main-padding);
+    min-width: 0;
 }
 
 .table-container {
@@ -1201,6 +1204,221 @@ tbody tr td {
 /* end account-summary */
 
 
+/* start payment-methods */
+
+.payment-methods {
+    padding: var(--main-padding);
+}
+
+.card-container {
+    width: 100%;
+    height: 190px;
+    perspective: 1000px;
+    margin-bottom: 14px;
+}
+
+.last-container {
+    margin-bottom: 0;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    padding: 28px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+}
+
+.card-front-header img {
+    width: 40px;
+}
+
+.card-front-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.front-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.front-icon div {
+    width: 24px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.card-front-visa {
+    background: #372caa;
+}
+
+.front-icon-visa {
+    background-color: #5e53bd;
+}
+
+.front-icon-visa div {
+    background-color: #9F99D7;
+}
+
+.card-front-mastercard {
+    background: #c70036;
+}
+
+.front-icon-mastercard {
+    background-color: #d2335e;
+}
+
+.front-icon-mastercard div {
+    background-color: #e4859e;
+}
+
+.card-front-paypal {
+    background: #193cb8;
+}
+
+.front-icon-paypal {
+    background-color: #4763c6;
+}
+
+.front-icon-paypal div {
+    background-color: #91a1dd;
+}
+
+.card-number {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-holder,
+.expires {
+    font-size: 12px;
+    color: #fcfcfc;
+}
+
+.paypal-date {
+    color: #06df72;
+}
+
+.main-card {
+    backdrop-filter: blur(4px);
+    background: #ffffff24;
+    border-radius: 50px;
+    padding: 6px 10px;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    font-weight: 600;
+}
+
+.card-front {
+    color: white;
+}
+
+.card-back {
+    background: linear-gradient(135deg,
+            #000f2f,
+            #00153d,
+            #000814);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.magnetic-strip {
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to right,
+            #000,
+            #333);
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.signature-section div {
+    font-size: 10px;
+    color: #a1a1aa;
+    margin-bottom: 6px;
+}
+
+.signature-box {
+    width: 100%;
+    padding: 6px 8px;
+    background: #e5e7eb;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+}
+
+.cvv-number {
+    color: #000000d9;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.cvv-line {
+    width: 100%;
+    height: 100%;
+    height: 8px;
+    background-image: linear-gradient(90deg, #0000000f, #0000002e, #0000000f);
+    transform: skew(-10deg);
+}
+
+.cvv-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+}
+
+.cvv-section .cvv {
+    font-weight: 600;
+    color: var(--sub-color);
+}
+
+.cvv-box {
+    font-size: 18px;
+    font-weight: 600;
+    background: #f8fafc;
+    color: #000000d9;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+/* end payment-methods */
+
+
 /* media */
 
 /* sm */
@@ -1467,15 +1685,18 @@ tbody tr td {
 
     /* start balnce sections */
 
+
+
     .container {
         grid-template-rows: auto auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto auto;
         grid-template-areas:
-            "nav-bar nav-bar nav-bar"
-            "expenses  income current-balance"
-            "recent-transactions recent-transactions recent-activities"
-            "recent-transactions recent-transactions monthly-bills"
-            "payment-methods income-versus-expenses budget-overview"
-            "payment-methods account-summary budget-overview";
+            "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
+            "expenses expenses income income current-balance current-balance"
+            "recent-activities recent-activities recent-activities income-versus-expenses income-versus-expenses income-versus-expenses"
+            "recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions recent-transactions"
+            "monthly-bills monthly-bills monthly-bills account-summary account-summary account-summary"
+            "payment-methods payment-methods payment-methods budget-overview budget-overview budget-overview";
     }
 
     .balance-price {
@@ -1556,6 +1777,19 @@ tbody tr td {
         margin-bottom: 12px;
         padding: 12px;
     }
+
+    .container {
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+            "nav-bar nav-bar nav-bar"
+            "expenses  income current-balance"
+            "recent-transactions recent-transactions recent-activities"
+            "recent-transactions recent-transactions monthly-bills"
+            "payment-methods income-versus-expenses budget-overview"
+            "payment-methods account-summary budget-overview";
+    }
+
 }
 
 /* xxl */
