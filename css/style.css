@@ -617,6 +617,7 @@ section {
 
 /* end monthly-bills */
 
+
 /* start recent-transactions */
 
 .recent-transactions {
@@ -842,8 +843,198 @@ tbody tr td {
     color: #008732;
 }
 
-
 /* end recent-transactions */
+
+
+/* start budget-overview */
+
+.budget-overview {
+    padding: var(--main-padding);
+}
+
+.budget-overview-main-card {
+    padding: 16px;
+    margin-bottom: 24px;
+    border: 1px solid #DBEAFEed;
+    border-radius: 16px;
+    background-color: #EEF3FF;
+}
+
+.main-card-header,
+.used {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.used {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--sub-color);
+}
+
+.total-budget-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2266FC;
+}
+
+.total-budget-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1C398E;
+}
+
+.residual-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--sub-color);
+}
+
+.residual-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00A63E;
+}
+
+.used-line {
+    height: 8px;
+    background-color: #E5E7EB;
+    border-radius: 20px;
+    position: relative;
+}
+
+.used-line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.first-used-line::before {
+    background: linear-gradient(to bottom right,
+            #2258F8,
+            #4035DD);
+    width: 82.5%;
+}
+
+.second-used-line::before {
+    background-color: #FF6900;
+    width: 50%;
+}
+
+.third-used-line::before {
+    background-color: #FB2C36;
+    width: 100%;
+}
+
+.forth-used-line::before {
+    background-color: #F6339A;
+    width: 80%;
+}
+
+.fifth-used-line::before {
+    background-color: #00C950;
+    width: 86%;
+}
+
+.budget-overview-card {
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.budget-overview-card:hover {
+    background-color: #F5F6F8;
+    box-shadow: 0 1px 3px 1px #E2E2E3;
+    transform: translateY(-2px);
+}
+
+.budget-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+
+.right-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.budget-card-img {
+    border-radius: 8px;
+    padding: 8px;
+    width: 32px;
+}
+
+.budget-card-img img {
+    width: 100%;
+    display: block;
+}
+
+.entertainment-card {
+    background-color: #FFEDD4;
+}
+
+.bills-card {
+    background-color: #FEE2E2;
+}
+
+.care-card {
+    background-color: #FCE7F3;
+}
+
+.supplies-card {
+    background-color: #DCFCE7;
+}
+
+.left-card-percentage {
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.entertainment-percentage {
+    background-color: #DCFCE7;
+    color: #166534;
+}
+
+.bills-percentage {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+
+.care-percentage {
+    background-color: #FEF3C7;
+    color: #92400E;
+}
+
+.supplies-percentage {
+    background-color: #DCFCE7;
+    color: #2E784A;
+}
+
+.budget-card-name,
+.left-card-price {
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.budget-card-price {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--sub-color);
+}
+
+/* end budget-overview */
+
 
 /* media */
 
