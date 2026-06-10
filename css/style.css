@@ -947,6 +947,10 @@ tbody tr td {
     transition: 0.3s;
 }
 
+.last-card {
+    margin-bottom: 0;
+}
+
 .budget-overview-card:hover {
     background-color: #F5F6F8;
     box-shadow: 0 1px 3px 1px #E2E2E3;
@@ -970,7 +974,7 @@ tbody tr td {
 .budget-card-img {
     border-radius: 8px;
     padding: 8px;
-    width: 32px;
+    width: 36px;
 }
 
 .budget-card-img img {
@@ -1152,9 +1156,50 @@ tbody tr td {
     height: 45px;
 }
 
-
-
 /* end income-versus-expenses */
+
+
+/* start account-summary */
+
+.account-summary {
+    padding: var(--main-padding);
+}
+
+.account-summary-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F9FAFB;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.left-card {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.left-card .left-card-minus {
+    color: #E7000B;
+}
+
+.current-account-card {
+    background-color: #DBEAFE;
+}
+
+.savings-account-card {
+    background-color: #DBFCE7;
+}
+
+.credit-card {
+    background-color: #F3E8FF;
+}
+
+
+/* end account-summary */
+
 
 /* media */
 
